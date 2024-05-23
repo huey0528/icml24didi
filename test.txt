@@ -1,0 +1,21 @@
+>>> import mujoco_py
+Import error. Trying to rebuild mujoco_py.
+Compiling /home/amax/anaconda3/envs/diffuser/lib/python3.8/site-packages/mujoco_py/cymj.pyx because it depends on /home/amax/anaconda3/envs/diffuser/lib/python3.8/site-packages/Cython/Includes/libc/stdlib.pxd.
+[1/1] Cythonizing /home/amax/anaconda3/envs/diffuser/lib/python3.8/site-packages/mujoco_py/cymj.pyx
+running build_ext
+building 'mujoco_py.cymj' extension
+
+gcc -pthread -B /home/amax/anaconda3/envs/diffuser/compiler_compat -Wl,--sysroot=/ -Wsign-compare -DNDEBUG -g -fwrapv -O3 -Wall -fPIC -Idiffuser/lib/python3.8/site-packages/mujoco_py -I/home/amax/anaconda3/envs/diffuser/lib/python3.8/site-packages/mujoco_py -I/home/amax/.mujoco/mujoco200/include -I/home/amax/anaconda3/envs/diffuser/lib/python3.8/site-packages/numpy/core/include -I/home/amax/anaconda3/envs/diffuser/include/python3.8 -c /home/amax/anaconda3/envs/diffuser/lib/python3.8/site-packages/mujoco_py/cymj.c -o /home/amax/anaconda3/envs/diffuser/lib/python3.8/site-packages/mujoco_py/generated/_pyxbld_2.0.2.13_38_linuxcpuextensionbuilder/temp.linux-x86_64-cpython-38/home/amax/anaconda3/envs/diffuser/lib/python3.8/site-packages/mujoco_py/cymj.o -fopenmp -w
+gcc -pthread -B /home/amax/anaconda3/envs/diffuser/compiler_compat -Wl,--sysroot=/ -Wsign-compare -DNDEBUG -g -fwrapv -O3 -Wall -fPIC -Idiffuser/lib/python3.8/site-packages/mujoco_py -I/home/amax/anaconda3/envs/diffuser/lib/python3.8/site-packages/mujoco_py -I/home/amax/.mujoco/mujoco200/include -I/home/amax/anaconda3/envs/diffuser/lib/python3.8/site-packages/numpy/core/include -I/home/amax/anaconda3/envs/diffuser/include/python3.8 -c /home/amax/anaconda3/envs/diffuser/lib/python3.8/site-packages/mujoco_py/gl/osmesashim.c -o /home/amax/anaconda3/envs/diffuser/lib/python3.8/site-packages/mujoco_py/generated/_pyxbld_2.0.2.13_38_linuxcpuextensionbuilder/temp.linux-x86_64-cpython-38/home/amax/anaconda3/envs/diffuser/lib/python3.8/site-packages/mujoco_py/gl/osmesashim.o -fopenmp -w
+gcc -pthread -shared -B /home/amax/anaconda3/envs/diffuser/compiler_compat -L/home/amax/anaconda3/envs/diffuser/lib -Wl,-rpath=/home/amax/anaconda3/envs/diffuser/lib -Wl,--no-as-needed -Wl,--sysroot=/ /home/amax/anaconda3/envs/diffuser/lib/python3.8/site-packages/mujoco_py/generated/_pyxbld_2.0.2.13_38_linuxcpuextensionbuilder/temp.linux-x86_64-cpython-38/home/amax/anaconda3/envs/diffuser/lib/python3.8/site-packages/mujoco_py/cymj.o /home/amax/anaconda3/envs/diffuser/lib/python3.8/site-packages/mujoco_py/generated/_pyxbld_2.0.2.13_38_linuxcpuextensionbuilder/temp.linux-x86_64-cpython-38/home/amax/anaconda3/envs/diffuser/lib/python3.8/site-packages/mujoco_py/gl/osmesashim.o -L/home/amax/.mujoco/mujoco200/bin -Wl,-R/home/amax/.mujoco/mujoco200/bin -lmujoco200 -lglewosmesa -lOSMesa -lGL -o /home/amax/anaconda3/envs/diffuser/lib/python3.8/site-packages/mujoco_py/generated/_pyxbld_2.0.2.13_38_linuxcpuextensionbuilder/lib.linux-x86_64-cpython-38/mujoco_py/cymj.cpython-38-x86_64-linux-gnu.so -fopenmp
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+  File "/home/amax/anaconda3/envs/diffuser/lib/python3.8/site-packages/mujoco_py/__init__.py", line 3, in <module>
+    from mujoco_py.builder import cymj, ignore_mujoco_warnings, functions, MujocoException
+  File "/home/amax/anaconda3/envs/diffuser/lib/python3.8/site-packages/mujoco_py/builder.py", line 510, in <module>
+    cymj = load_cython_ext(mujoco_path)
+  File "/home/amax/anaconda3/envs/diffuser/lib/python3.8/site-packages/mujoco_py/builder.py", line 106, in load_cython_ext
+    mod = load_dynamic_ext('cymj', cext_so_path)
+  File "/home/amax/anaconda3/envs/diffuser/lib/python3.8/site-packages/mujoco_py/builder.py", line 125, in load_dynamic_ext
+    return loader.load_module()
+ImportError: /home/amax/anaconda3/envs/diffuser/bin/../lib/libstdc++.so.6: version `GLIBCXX_3.4.30' not found (required by /lib/x86_64-linux-gnu/libLLVM-13.so.1)
